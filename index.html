@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SolarPunk Bank — Money That Works for People</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0a0a0a;color:#fff;font-family:Georgia,serif}
+.top{background:rgba(255,214,0,0.05);border-bottom:1px solid rgba(255,214,0,0.15);padding:14px 24px}
+.logo{color:#ffd700;font-family:monospace;font-size:1.1rem;font-weight:bold}
+.tagline{color:rgba(255,255,255,0.3);font-family:monospace;font-size:.7rem;margin-top:4px}
+h1{text-align:center;padding:48px 24px 16px;font-size:1.8rem;font-weight:normal;line-height:1.3}
+h1 em{color:#ffd700;font-style:normal}
+.sub{text-align:center;max-width:620px;margin:0 auto;padding:0 24px 48px;color:rgba(255,255,255,0.4);line-height:1.8;font-size:.95rem}
+.section{max-width:900px;margin:0 auto;padding:0 24px 48px}
+.section-head{color:rgba(255,255,255,0.25);font-family:monospace;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;padding-bottom:20px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-bottom:48px}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:22px}
+.card h3{font-size:.95rem;font-weight:normal;margin-bottom:8px}
+.card p{color:rgba(255,255,255,0.4);font-size:.82rem;line-height:1.65;margin-bottom:10px}
+.card .link{font-family:monospace;font-size:.75rem;color:#ffd700;text-decoration:none}
+.card .tag{display:inline-block;font-family:monospace;font-size:.6rem;padding:2px 6px;border-radius:3px;margin-bottom:8px}
+.tag-free{background:rgba(0,255,136,0.15);color:#00ff88}
+.tag-credit{background:rgba(255,214,0,0.15);color:#ffd700}
+.tag-mutual{background:rgba(0,180,255,0.15);color:#00b4ff}
+.cta{background:rgba(255,214,0,0.05);border:1px solid rgba(255,214,0,0.15);border-radius:16px;padding:32px;text-align:center;max-width:700px;margin:0 auto 60px}
+.cta h2{font-size:1.3rem;font-weight:normal;margin-bottom:10px}
+.cta p{color:rgba(255,255,255,0.4);font-size:.9rem;line-height:1.7;margin-bottom:20px}
+.cta a{display:inline-block;border:1px solid rgba(255,214,0,0.4);color:#ffd700;padding:11px 24px;border-radius:8px;text-decoration:none;font-family:monospace;font-size:.8rem}
+.btc-box{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:16px 20px;font-family:monospace;font-size:.8rem;color:rgba(255,255,255,0.5);margin-top:12px;word-break:break-all}
+.btc-label{font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:6px}
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="logo">🏦 SolarPunk Bank</div>
+  <div class="tagline">Credit unions · mutual aid funds · Bitcoin · zero-interest lending · money as a tool not a weapon</div>
+</div>
+<h1>Money that works<br>for <em>people.</em></h1>
+<p class="sub">Banks extract. Credit unions return. Bitcoin removes the middleman entirely. This is a guide to financial infrastructure that doesn't treat you like a resource to be mined.</p>
+
+<div class="section">
+  <div class="section-head">Alternatives to Predatory Banking</div>
+  <div class="cards">
+    <div class="card">
+      <div class="tag tag-free">not-for-profit</div>
+      <h3>Credit Unions</h3>
+      <p>Member-owned, not shareholder-owned. Lower fees, higher savings rates, actual humans who know your name. NCUA-insured same as banks.</p>
+      <a href="https://www.mycreditunion.gov/about-credit-unions/credit-union-locator" class="link">Find yours → mycreditunion.gov</a>
+    </div>
+    <div class="card">
+      <div class="tag tag-free">zero fees</div>
+      <h3>Community Development Financial Institutions (CDFIs)</h3>
+      <p>Banks chartered specifically to serve low-income communities. More flexible loan criteria. Many offer Individual Development Accounts (IDAs) that match your savings 2:1 or 3:1.</p>
+      <a href="https://www.cdfifund.gov/programs-training/certification/cdfi" class="link">Find CDFIs → cdfifund.gov</a>
+    </div>
+    <div class="card">
+      <div class="tag tag-mutual">mutual</div>
+      <h3>Lending Circles</h3>
+      <p>A group of people who each contribute monthly to a pool, and each member gets the full pool once. Zero interest. Builds credit. Used for centuries across cultures (tandas, susus, chit funds).</p>
+      <a href="https://missionsf.org/lendingcircles/" class="link">Mission Asset Fund model →</a>
+    </div>
+    <div class="card">
+      <div class="tag tag-free">free account</div>
+      <h3>Chime / Current / Dave</h3>
+      <p>No monthly fees, no minimum balance, no overdraft fees ($34 average at traditional banks). Not perfect, but better than being unbanked.</p>
+      <a href="https://chime.com" class="link">chime.com</a>
+    </div>
+    <div class="card">
+      <div class="tag tag-credit">Bitcoin</div>
+      <h3>Bitcoin / Lightning</h3>
+      <p>Send money anywhere, to anyone, for near-zero cost. No bank permission needed. Receive international payments in seconds. Not investment advice — a tool for financial access.</p>
+      <a href="https://strike.me" class="link">Strike (simplest) →</a>
+    </div>
+    <div class="card">
+      <div class="tag tag-free">zero interest</div>
+      <h3>Buy-Nothing / Mutual Aid</h3>
+      <p>The oldest bank: people sharing what they have. Buy Nothing groups (Facebook, app), Freecycle, and local mutual aid networks. See the SolarPunk Mutual Aid board.</p>
+      <a href="https://meekotharaccoon-cell.github.io/solarpunk-mutual-aid/board.html" class="link">SolarPunk Mutual Aid →</a>
+    </div>
+  </div>
+
+  <div class="section-head">Free or Low-Cost Loans</div>
+  <div class="cards">
+    <div class="card">
+      <h3>Kiva</h3>
+      <p>0% interest microloans up to $15,000 for entrepreneurs. Funded by a global crowd. US residents qualify. No credit score required.</p>
+      <a href="https://www.kiva.org/borrow" class="link">kiva.org/borrow</a>
+    </div>
+    <div class="card">
+      <h3>SBA Microloans</h3>
+      <p>Up to $50,000 for small businesses. 6.5% interest max (better than any credit card). Flexible terms, no collateral for small amounts.</p>
+      <a href="https://www.sba.gov/funding-programs/loans/microloans" class="link">sba.gov/loans</a>
+    </div>
+    <div class="card">
+      <h3>USDA Farm Loans</h3>
+      <p>Microloans for farmers and ranchers. Up to $50,000. Flexible repayment. Specifically designed for beginning and underserved farmers.</p>
+      <a href="https://www.fsa.usda.gov/programs-and-services/farm-loan-programs/" class="link">fsa.usda.gov</a>
+    </div>
+    <div class="card">
+      <h3>Emergency Rental Assistance</h3>
+      <p>Many states still have ERA funds available for people behind on rent. Search: "[your state] emergency rental assistance 2024"</p>
+      <a href="https://home.treasury.gov/policy-issues/coronavirus/assistance-for-state-local-and-tribal-governments/emergency-rental-assistance-program" class="link">treasury.gov ERA →</a>
+    </div>
+  </div>
+</div>
+
+<div class="cta">
+  <h2>Support SolarPunk directly</h2>
+  <p>Gaza Rose Gallery: $1 per artwork, 70% to PCRF. Or send Bitcoin to keep this infrastructure running.</p>
+  <a href="https://meekotharaccoon-cell.github.io/gaza-rose-gallery">🌹 Gaza Rose Gallery</a>
+  <div class="btc-box">
+    <div class="btc-label">Bitcoin (BTC)</div>
+    bc1qka74n62h3zk9mcv8v8xjtjtwehmnm24w3pfzzr
+  </div>
+</div>
+</body>
+</html>
