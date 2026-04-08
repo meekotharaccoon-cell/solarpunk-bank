@@ -1,0 +1,55 @@
+name: Daily Bank Cycle
+
+on:
+  schedule:
+    # Run daily at 15:00 UTC
+    - cron: '0 15 * * *'
+  workflow_dispatch:
+    # Manual trigger
+    inputs:
+      dry_run:
+        description: 'Dry run (no commits)'
+        required: false
+        default: 'false'
+
+permissions:
+  contents: write
+
+jobs:
+  daily-cycle:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run bank agent
+        env:
+          WALLET_BTC_SEGWIT: ${{ secrets.WALLET_BTC_SEGWIT }}
+        run: |
+          python agent/bank_agent.py
+
+      - name: Check for ledger changes
+        id: changes
+        run: |
+          git diff --quiet data/ || echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Commit ledger updates
+        if: steps.changes.outputs.changed == 'true' && github.event.inputs.dry_run != 'true'
+        run: |
+          git config user.name "SolarPunk Bank Bot"
+          git config user.email "bank-bot@solarpunk.community"
+          git add data/
+          git commit -m "chore(bank): daily ledger update $(date -u +%Y-%m-%d)"
+          git push
